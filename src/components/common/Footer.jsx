@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
         <hr className="hr" />
         <span className="block text-xs text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024 Beehive community - All Rights Reserved.
+          © 2024 FandomHub - All Rights Reserved.
         </span>
         <span className="block text-xs text-gray-500 sm:text-center dark:text-gray-400">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. In fuga animi quidem repellat minus illum harum ea voluptate nemo.
