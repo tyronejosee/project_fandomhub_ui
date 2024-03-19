@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import ButtonPrimary from "./ButtomPrimary";
@@ -6,6 +6,26 @@ import ButtonPrimary from "./ButtomPrimary";
 const Navbar = () => {
   const handleMessage = () => {
     alert("Pending logic");
+  };
+
+  const [theme, setTheme] = useState(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+
+    return "light";
+  });
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleChangeTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   return (
@@ -28,7 +48,13 @@ const Navbar = () => {
           </span>
         </Link>
         <SearchBar />
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button
+          className="order-4 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 px-4 h-8 rounded-md"
+          onClick={handleChangeTheme}
+        >
+          Theme
+        </button>
+        <div className="flex md:order-4 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <ButtonPrimary onClick={handleMessage}>Get started</ButtonPrimary>
           {/* <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
             <span className="sr-only">Open main menu</span>
