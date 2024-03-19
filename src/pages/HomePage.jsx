@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "../components/common/Card";
 import Article from "../components/common/ArticleList";
+import CardTrailer from "../components/common/CardTrailer";
 
 const HomePage = () => {
   const animes = [
@@ -34,20 +35,24 @@ const HomePage = () => {
       id: 6,
       name: "Solo Leveling",
       image: "https://cdn.myanimelist.net/images/anime/1841/138405l.jpg",
-    }
+    },
   ];
 
   return (
-    <>
-      <section className="space-y-2">
-        <h2 className="text-2xl font-bold">Featured Articles</h2>
-        <Article />
-        <Article /> 
-        <Article />
-        <Article />
+    <main className="mt-4 mb-4 space-y-12">
+      <section className="space-y-4">
+        <h2 className="text-3xl font-bold tracking-tight">Featured Articles</h2>
+        <section>
+          <Article />
+          <Article />
+          <Article />
+          <Article />
+        </section>
       </section>
-      <section>
-        <h2 className="text-2xl font-bold">Winter 2024</h2>
+      <section className="space-y-4">
+        <h2 className="scroll-m-20 text-3xl font-bold tracking-tight">
+          Winter 2024
+        </h2>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           {animes.map((anime) => (
             <Link
@@ -59,7 +64,30 @@ const HomePage = () => {
           ))}
         </div>
       </section>
-    </>
+      <section>
+        <h2 className="scroll-m-20 text-3xl font-bold tracking-tight">
+          Latest Updated Episode Videos
+        </h2>
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+          {animes.map((anime) => (
+            <Link
+              key={anime.id}
+              to={{ pathname: `/animes/${anime.id}`, state: anime }}
+            >
+              <Card name={anime.name} image={anime.image} />
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="space-y-4">
+        <h2 className="scroll-m-20 text-3xl font-bold tracking-tight">
+          Most Popular Anime Trailers
+        </h2>
+        <div>
+          <CardTrailer />
+        </div>
+      </section>
+    </main>
   );
 };
 

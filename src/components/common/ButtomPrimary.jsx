@@ -5,7 +5,7 @@ const ButtonPrimary = ({ children, onClick, className }) => {
   return (
     <button
       onClick={onClick}
-      className={`text-white bg-fuchsia-700 hover:bg-fuchsia-800 focus:ring-4 focus:outline-none focus:ring-fuchsia-300 font-medium rounded-md text-sm px-4 py-2 text-center dark:bg-fuchsia-600 dark:hover:bg-fuchsia-700 dark:focus:ring-fuchsia-800 ${className}`}
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-fuchsia-600 text-white hover:bg-fuchsia-600/10 h-9 px-4 py-2 ${className}`}
     >
       {children}
     </button>

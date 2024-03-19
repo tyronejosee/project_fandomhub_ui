@@ -4,27 +4,29 @@ const Article = () => {
   return (
     <Link
       to="/article"
-      className="flex hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-neutral-800 p-2 border border-neutral-950 rounded-xl"
+      className="flex p-2 border-b border-neutral-200 dark:border-neutral-800"
     >
       <img
-        className="object-cover h-24 rounded-md aspect-square"
+        className="border border-neutral-200 dark:border-neutral-800 object-cover h-28 rounded-md aspect-square"
         src="https://www.geekmi.news/__export/1689612113420/sites/debate/img/2023/07/17/disexo_sin_txtulo_x2x.jpg_554688468.jpg"
         alt=""
       />
-      <div className="flex flex-col justify-between px-4 leading-normal">
-        <h5 className="text-sm font-medium text-neutral-300">
+      <div className="flex flex-col justify-between pl-4 leading-normal">
+        <h5 className="text-base font-medium">
           Which Wholesome Romance Novel Should Be Adapted to Manga?
         </h5>
-        <p className="text-sm text-gray-700 dark:text-gray-400">
+        <p className="text-neutral-500">
           Here are the 10 finalists from the MAL x Honeyfeed Writing Contest
           2023! Try them out and let us know which web novels you want to see
-          brought to life as published light novel or manga.
+          brought to life as published light novel or manga.{" "}
+          <span className="text-fuchsia-600 font-medium">read more...</span>
         </p>
-        <div className="text-sm">
+        <div className="flex gap-4">
           <p>
-            by <span className="underline">Tyrone Jose</span> |{" "}
-            <span>29.000 views</span> | <span>Spoiler</span>
+            by <span className="font-medium">Tyrone Jose</span>
           </p>
+          <p>29.000 views</p>
+          <p className="text-red-500 font-medium">Spoiler</p>
         </div>
       </div>
     </Link>

@@ -8,17 +8,17 @@ const SubNavbar = () => {
   };
 
   return (
-    <nav className="bg-fuchsia-700 border-gray-200 dark:border-gray-600 dark:bg-fuchsia-800">
+    <nav className="border-b border-neutral-200 dark:border-neutral-800">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2">
         <div
           id="mega-menu-full"
           className="items-center justify-between font-medium hidden w-full md:flex md:w-auto md:order-1"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-md md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
             <li>
               <button
                 onClick={toggleMenu}
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-blue-500 dark:border-gray-700"
+                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-md md:w-auto md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-blue-500 dark:border-gray-700"
               >
                 Anime{" "}
                 <svg
@@ -40,30 +40,24 @@ const SubNavbar = () => {
                 </svg>
               </button>
             </li>
-            <li>
-              Manga
-            </li>
-            <li>
-              Community
-            </li>
-            <li>
-              Industry  
-            </li>
-            <li>
-              Help
-            </li>
+            <li>Manga</li>
+            <li>Community</li>
+            <li>Industry</li>
+            <li>Help</li>
           </ul>
         </div>
       </div>
       <div
-        className={`mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 ${isOpen ? "h-auto opacity-100" : "h-0 opacity-0 overflow-hidden"}`}
+        className={`mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 ${
+          isOpen ? "h-auto opacity-100" : "h-0 opacity-0 overflow-hidden"
+        }`}
       >
         <div className="grid max-w-screen-xl p-2 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
           <ul>
             <li>
               <a
                 href="#"
-                className="block p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="block p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <div className="font-semibold">Online Stores</div>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -74,7 +68,7 @@ const SubNavbar = () => {
             <li>
               <a
                 href="#"
-                className="block p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="block p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <div className="font-semibold">Segmentation</div>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -85,7 +79,7 @@ const SubNavbar = () => {
             <li>
               <a
                 href="#"
-                className="block p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="block p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <div className="font-semibold">Marketing CRM</div>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -98,6 +92,6 @@ const SubNavbar = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default SubNavbar;

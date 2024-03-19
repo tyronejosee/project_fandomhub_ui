@@ -25,7 +25,7 @@ const Pending = () => {
       </p>
       <div className="relative w-full h-64" onMouseMove={handleMouseMove}>
         <div
-          className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-fuchsia-700 opacity-507</gh rounded-full"
+          className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-fuchsia-700 opacity-507</gh rounded-md"
           style={{
             backgroundPosition: `${position.x}px ${position.y}px`,
           }}

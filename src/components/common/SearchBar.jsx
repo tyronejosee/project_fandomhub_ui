@@ -6,12 +6,12 @@ const SearchBar = () => {
           <input
             type="search"
             id="search-navbar"
-            className="bg-neutral-100 dark:bg-neutral-800 rounded-xl w-full h-8 px-4 focus:outline-none focus:ring focus:ring-primary placeholder-neutral-400 text-sm dark:placeholder-neutral-600 text-center focus:text-left focus:pl-12 border border-neutral-700"
+            className="bg-neutral-100 dark:bg-neutral-900 rounded-md w-full h-8 px-4 focus:outline-none focus:ring focus:ring-primary placeholder-neutral-400 text-sm dark:placeholder-neutral-600 text-center focus:text-left focus:pl-12 border border-neutral-700"
             placeholder="Search Anime, Manga, and more..."
             name="search"
             // defaultValue={new URLSearchParams(window.location.search).get("search")}
           />
-          <div className="absolute rounded-full inset-y-0 left-0 p-4 flex items-center pointer-events-none">
+          <div className="absolute rounded-md inset-y-0 left-0 p-4 flex items-center pointer-events-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
