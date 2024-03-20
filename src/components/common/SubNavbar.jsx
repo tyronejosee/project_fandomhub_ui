@@ -9,7 +9,7 @@ const SubNavbar = () => {
 
   return (
     <nav className="border-b border-neutral-200 dark:border-neutral-800">
-      <div className="max-w-8xl flex flex-wrap justify-center items-center mx-auto px-4 sm:px-6 md:px-8 py-2">
+      <div className="max-w-8xl flex flex-wrap items-center mx-auto px-4 sm:px-6 md:px-8 py-2">
         <div
           id="mega-menu-full"
           className="items-center justify-between font-medium hidden w-full md:flex md:w-auto md:order-1"
@@ -48,7 +48,7 @@ const SubNavbar = () => {
         </div>
       </div>
       <div
-        className={`mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 ${
+        className={`mt-1 z-100 border-gray-200 shadow-sm bg-gray-50 md:bg-neutral-200 border-y dark:bg-neutral-800 dark:border-gray-600 ${
           isOpen ? "h-auto opacity-100" : "h-0 opacity-0 overflow-hidden"
         }`}
       >

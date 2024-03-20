@@ -13,11 +13,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <SubNavbar />
       <section className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col min-h-screen">
         <Sidebar />
-        <div className="pl-[20.5rem]">{children}</div>
-        <Footer />
+        <div className="pl-0 lg:pl-[20.5rem]">
+          <SubNavbar />
+          {children}
+          <Footer />
+        </div>
       </section>
     </>
   );
