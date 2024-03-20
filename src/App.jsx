@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import HomePage from "./pages/HomePage";
 import HelpPage from "./pages/HelpPage";
 import Layout from "./components/layout/Layout";
-import AnimeDetail from "./components/layout/AnimeDetail";
+import AnimeDetail from "./pages/AnimeDetail";
 import Pending from "./components/common/Pending";
 import GenreList from "./components/categories/GenreList";
 
@@ -17,6 +18,9 @@ function App() {
           <Route path="/article" element={<Pending />} />
           <Route path="/genres" element={<GenreList />} />
           {/* Help paths */}
+          <Route path="/animes/:id" element={<Pending />} />
+          <Route path="/animes" element={<Pending />} />
+          <Route path="/mangas" element={<Pending />} />
           <Route path="/help/support" element={<Pending />} />
           <Route path="/help/advertising" element={<Pending />} />
           <Route path="/help/faq" element={<Pending />} />
@@ -25,12 +29,10 @@ function App() {
           <Route path="/help/cookie" element={<Pending />} />
           <Route path="/help/notice-at-collection" element={<Pending />} />
           <Route path="/sitemap" element={<Pending />} />
-          <Route path="/animes" element={<Pending />} />
-          <Route path="/animes/:id" element={<AnimeDetail />} />
-          <Route path="/mangas" element={<Pending />} />
           {/* Error paths */}
           <Route path="*" element={<Pending />} />
         </Routes>
+        <Toaster />
       </Layout>
     </Router>
   );

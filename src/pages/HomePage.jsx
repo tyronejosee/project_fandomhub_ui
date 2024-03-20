@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Card from "../components/common/Card";
+import AnimeList from "./AnimeList";
 import Article from "../components/common/ArticleList";
 import CardTrailer from "../components/common/CardTrailer";
 
@@ -57,7 +58,7 @@ const HomePage = () => {
           {animes.map((anime) => (
             <Link
               key={anime.id}
-              to={{ pathname: `/animes/${anime.id}`, state: anime }}
+              to={{ pathname: `/animes/${anime.id}`, state: { anime: anime } }}
             >
               <Card name={anime.name} image={anime.image} />
             </Link>
@@ -70,12 +71,7 @@ const HomePage = () => {
         </h2>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           {animes.map((anime) => (
-            <Link
-              key={anime.id}
-              to={{ pathname: `/animes/${anime.id}`, state: anime }}
-            >
-              <Card name={anime.name} image={anime.image} />
-            </Link>
+            <Card name={anime.name} image={anime.image} />
           ))}
         </div>
       </section>
