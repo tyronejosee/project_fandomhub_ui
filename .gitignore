@@ -1,5 +1,7 @@
 # Project files
 desktop.ini
+.env.dev
+.env.prod
 
 # Logs
 logs
