@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="mt-auto border-t border-neutral-200 dark:border-neutral-800">
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 space-y-4">
+    <footer className="mt-auto pl-[20.5rem]">
+      <div className="w-full mx-auto p-4 md:py-8 space-y-4 border-t border-neutral-200 dark:border-neutral-800">
         <div className="sm:flex sm:items-center sm:justify-center border-b border-neutral-100 dark:border-neutral-800 pb-8">
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>

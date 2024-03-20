@@ -6,23 +6,20 @@ import Sidebar from "../common/Sidebar";
 import Footer from "../common/Footer";
 
 const Layout = ({ children }) => {
-  const location = useLocation();
-  const showSidebar = !location.pathname.includes("/help/");
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
-    <main className="flex flex-col min-h-screen">
+    <>
       <Navbar />
       <SubNavbar />
-      <section className="max-w-screen-xl flex mx-auto">
-        <div className={showSidebar ? "w-3/4" : "w-full"}>{children}</div>
-        {showSidebar && <Sidebar />}
+      <section className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col min-h-screen">
+        <Sidebar />
+        <div className="pl-[20.5rem]">{children}</div>
+        <Footer />
       </section>
-      <Footer />
-    </main>
+    </>
   );
 };
 

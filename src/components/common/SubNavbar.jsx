@@ -9,7 +9,7 @@ const SubNavbar = () => {
 
   return (
     <nav className="border-b border-neutral-200 dark:border-neutral-800">
-      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2">
+      <div className="max-w-8xl flex flex-wrap justify-center items-center mx-auto px-4 sm:px-6 md:px-8 py-2">
         <div
           id="mega-menu-full"
           className="items-center justify-between font-medium hidden w-full md:flex md:w-auto md:order-1"

@@ -1,46 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Card from "../components/common/Card";
-import AnimeList from "./AnimeList";
 import Article from "../components/common/ArticleList";
 import CardTrailer from "../components/common/CardTrailer";
+import animesData from "../assets/data/animes.json";
 
 const HomePage = () => {
-  const animes = [
-    {
-      id: 1,
-      name: "The Dangers in My Heart Season 2",
-      image: "https://cdn.myanimelist.net/images/anime/1643/138581.jpg",
-    },
-    {
-      id: 2,
-      name: "A Sign of Affection",
-      image: "https://cdn.myanimelist.net/images/anime/1188/139825l.jpg",
-    },
-    {
-      id: 3,
-      name: "The Unwanted Undead Adventurer",
-      image: "https://cdn.myanimelist.net/images/anime/1008/140287l.jpg",
-    },
-    {
-      id: 4,
-      name: "Solo Leveling",
-      image: "https://cdn.myanimelist.net/images/anime/1841/138405l.jpg",
-    },
-    {
-      id: 5,
-      name: "The Unwanted Undead Adventurer",
-      image: "https://cdn.myanimelist.net/images/anime/1008/140287l.jpg",
-    },
-    {
-      id: 6,
-      name: "Solo Leveling",
-      image: "https://cdn.myanimelist.net/images/anime/1841/138405l.jpg",
-    },
-  ];
+  const animes = animesData;
 
   return (
-    <main className="mt-4 mb-4 space-y-12">
+    <main className="mt-2 mb-2 space-y-12">
       <section className="space-y-4">
         <h2 className="text-3xl font-bold tracking-tight">Featured Articles</h2>
         <section>
@@ -58,7 +27,7 @@ const HomePage = () => {
           {animes.map((anime) => (
             <Link
               key={anime.id}
-              to={{ pathname: `/animes/${anime.id}`, state: { anime: anime } }}
+              to={{ pathname: `/animes/${anime.id}`, state: anime }}
             >
               <Card name={anime.name} image={anime.image} />
             </Link>

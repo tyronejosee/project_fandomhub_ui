@@ -5,7 +5,7 @@ import HelpPage from "./pages/HelpPage";
 import Layout from "./components/layout/Layout";
 import AnimeDetail from "./pages/AnimeDetail";
 import Pending from "./components/common/Pending";
-import GenreList from "./components/categories/GenreList";
+import { GenrePage } from "./pages/GenrePage";
 
 function App() {
   return (
@@ -16,9 +16,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<HelpPage />} />
           <Route path="/article" element={<Pending />} />
-          <Route path="/genres" element={<GenreList />} />
+          <Route path="/genres" element={<GenrePage />} />
+          <Route path="/genres/:id" element={<Pending />} />
           {/* Help paths */}
-          <Route path="/animes/:id" element={<Pending />} />
+          <Route path="/animes/:id" element={<AnimeDetail />} />
           <Route path="/animes" element={<Pending />} />
           <Route path="/mangas" element={<Pending />} />
           <Route path="/help/support" element={<Pending />} />

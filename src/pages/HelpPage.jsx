@@ -1,6 +1,6 @@
 const HelpPage = () => {
   return (
-    <section className="p-4">
+    <>
       <blockquote className="text-xl italic font-semibold text-gray-900 dark:text-white">
         <svg
           className="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4"
@@ -61,7 +61,7 @@ const HelpPage = () => {
         support and operations teams have richer contextual information to
         rapidly respond to requests, incidents, and changes.
       </p>
-    </section>
+    </>
   );
 };
 

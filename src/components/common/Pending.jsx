@@ -3,11 +3,6 @@ import { useLocation } from "react-router-dom";
 
 const Pending = () => {
   const location = useLocation();
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e) => {
-    setPosition({ x: e.clientX, y: e.clientY });
-  };
 
   return (
     <section className="p-4">
@@ -23,15 +18,6 @@ const Pending = () => {
         maiores modi, voluptates optio totam corrupti provident voluptatibus
         accusantium delectus non doloremque numquam quo deleniti.
       </p>
-      <div className="relative w-full h-64" onMouseMove={handleMouseMove}>
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-fuchsia-700 opacity-507</gh rounded-md"
-          style={{
-            backgroundPosition: `${position.x}px ${position.y}px`,
-          }}
-        ></div>
-        <div className="w-full bg-red-600"></div>
-      </div>
     </section>
   );
 };
