@@ -1,11 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
-import HomePage from "./pages/HomePage";
-import HelpPage from "./pages/HelpPage";
-import Layout from "./components/layout/Layout";
-import AnimeDetail from "./pages/AnimeDetail";
-import Pending from "./components/common/Pending";
-import { GenrePage } from "./pages/GenrePage";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import HomePage from './pages/HomePage';
+import HelpPage from './pages/HelpPage';
+import Layout from './components/layout/Layout';
+// import AnimeDetail from "./pages/AnimeDetail";
+import Pending from './components/common/Pending';
+import { GenrePage } from './pages/GenrePage';
+import ContentDetail from './components/content/ContentDetail';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/genres" element={<GenrePage />} />
           <Route path="/genres/:id" element={<Pending />} />
           {/* Help paths */}
-          <Route path="/animes/:id" element={<AnimeDetail />} />
+          <Route path="/animes/:id" element={<ContentDetail />} />
           <Route path="/animes" element={<Pending />} />
           <Route path="/mangas" element={<Pending />} />
           <Route path="/help/support" element={<Pending />} />
