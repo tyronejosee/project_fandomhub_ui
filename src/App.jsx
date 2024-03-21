@@ -7,6 +7,7 @@ import Layout from './components/layout/Layout';
 import Pending from './components/common/Pending';
 import { GenrePage } from './pages/GenrePage';
 import ContentDetail from './components/content/ContentDetail';
+import ButtonScrollTop from './components/common/ButtonScrollTop';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           {/* Error paths */}
           <Route path="*" element={<Pending />} />
         </Routes>
+        <ButtonScrollTop />
         <Toaster />
       </Layout>
     </Router>
