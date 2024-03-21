@@ -1,9 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Card from "../components/common/Card";
-import Article from "../components/common/ArticleList";
-import CardTrailer from "../components/common/CardTrailer";
-import animesData from "../assets/data/animes.json";
+import { Link } from 'react-router-dom';
+import Card from '../components/common/Card';
+import Article from '../components/common/ArticleList';
+import CardTrailer from '../components/common/CardTrailer';
+import animesData from '../data/animes.json';
 
 const HomePage = () => {
   const animes = animesData;
@@ -40,7 +39,7 @@ const HomePage = () => {
         </h2>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           {animes.map((anime) => (
-            <Card name={anime.name} image={anime.image} />
+            <Card key={anime.id} name={anime.name} image={anime.image} />
           ))}
         </div>
       </section>

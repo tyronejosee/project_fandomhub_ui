@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getGenres } from "../../api/genres.api";
+import { getGenres } from "../../services/genres";
 import { GenreCard } from "./GenreCard";
 
 export function GenreList() {
