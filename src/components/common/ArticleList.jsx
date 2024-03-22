@@ -6,11 +6,14 @@ const Article = () => {
       to="/article"
       className="flex py-2 border-b border-neutral-200 dark:border-neutral-800"
     >
-      <img
-        className="border border-neutral-200 dark:border-neutral-800 object-cover h-28 rounded-md aspect-square"
-        src="https://www.geekmi.news/__export/1689612113420/sites/debate/img/2023/07/17/disexo_sin_txtulo_x2x.jpg_554688468.jpg"
-        alt=""
-      />
+      <div className="overflow-hidden rounded-md aspect-[1/1] bg-neutral-900">
+        <img
+          className="h-28 object-cover transition-all hover:scale-105 aspect-[1/1]"
+          src="https://www.geekmi.news/__export/1689612113420/sites/debate/img/2023/07/17/disexo_sin_txtulo_x2x.jpg_554688468.jpg"
+          alt=""
+        />
+        {/* border border-neutral-200 dark:border-neutral-800 object-cover h-28 rounded-md aspect-square */}
+      </div>
       <div className="flex flex-col justify-between pl-4 leading-normal">
         <h5 className="text-base font-medium">
           Which Wholesome Romance Novel Should Be Adapted to Manga?
