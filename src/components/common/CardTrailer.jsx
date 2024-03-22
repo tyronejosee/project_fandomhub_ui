@@ -30,7 +30,7 @@ const CardTrailer = () => {
 
   return (
     <>
-      <div className="grid grid-cols-4 gap-2">
+      <div className="grid grid-cols-4 gap-4">
         <div className="bg-red-500 w-full h-32 rounded-md"></div>
         <div className="bg-red-500 w-full h-32 rounded-md"></div>
         <div className="bg-red-500 w-full h-32 rounded-md"></div>

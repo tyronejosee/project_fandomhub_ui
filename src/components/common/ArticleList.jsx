@@ -4,7 +4,7 @@ const Article = () => {
   return (
     <Link
       to="/article"
-      className="flex p-2 border-b border-neutral-200 dark:border-neutral-800"
+      className="flex py-2 border-b border-neutral-200 dark:border-neutral-800"
     >
       <img
         className="border border-neutral-200 dark:border-neutral-800 object-cover h-28 rounded-md aspect-square"
