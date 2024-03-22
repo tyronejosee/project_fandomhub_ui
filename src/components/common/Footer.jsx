@@ -12,58 +12,36 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to={"/"} className="hover:underline me-4 md:me-6">
-                Press Room
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/help/support"}
-                className="hover:underline me-4 md:me-6"
-              >
+              <Link to={"/support"} className="hover:underline me-4 md:me-6">
                 Support
               </Link>
             </li>
             <li>
               <Link
-                to={"/help/advertising"}
+                to={"/advertising"}
                 className="hover:underline me-4 md:me-6"
               >
                 Advertising
               </Link>
             </li>
             <li>
-              <Link to={"/help/faq"} className="hover:underline me-4 md:me-6">
+              <Link to={"/faq"} className="hover:underline me-4 md:me-6">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link to={"/help/terms"} className="hover:underline me-4 md:me-6">
+              <Link to={"/terms"} className="hover:underline me-4 md:me-6">
                 Terms
               </Link>
             </li>
             <li>
-              <Link
-                to={"/help/privacy"}
-                className="hover:underline me-4 md:me-6"
-              >
+              <Link to={"/privacy"} className="hover:underline me-4 md:me-6">
                 Privacy
               </Link>
             </li>
             <li>
-              <Link
-                to={"/help/cookie"}
-                className="hover:underline me-4 md:me-6"
-              >
+              <Link to={"/cookie"} className="hover:underline me-4 md:me-6">
                 Cookie
-              </Link>
-            </li>
-            <li>
-              <Link
-                to={"/help/notice-at-collection"}
-                className="hover:underline me-4 md:me-6"
-              >
-                Notice at Collection
               </Link>
             </li>
             <li>

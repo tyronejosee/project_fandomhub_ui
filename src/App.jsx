@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import HomePage from './pages/HomePage';
-import HelpPage from './pages/HelpPage';
-import Layout from './components/layout/Layout';
-// import AnimeDetail from "./pages/AnimeDetail";
-import Pending from './components/common/Pending';
-import { GenrePage } from './pages/GenrePage';
-import ContentDetail from './components/content/ContentDetail';
-import ButtonScrollTop from './components/common/ButtonScrollTop';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import SupportPage from "./pages/SupportPage";
+import Layout from "./components/layout/Layout";
+import Pending from "./components/common/Pending";
+import { GenrePage } from "./pages/GenrePage";
+import ContentDetail from "./components/content/ContentDetail";
+import ButtonScrollTop from "./components/common/ButtonScrollTop";
 
 function App() {
   return (
@@ -16,21 +16,23 @@ function App() {
         <Routes>
           {/* Main paths */}
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<HelpPage />} />
+          {/* Anime paths */}
           <Route path="/article" element={<Pending />} />
-          <Route path="/genres" element={<GenrePage />} />
-          <Route path="/genres/:id" element={<Pending />} />
+          <Route path="/genre" element={<GenrePage />} />
+          <Route path="/genre/:id" element={<Pending />} />
+          <Route path="/anime/:id" element={<ContentDetail />} />
+          <Route path="/anime" element={<Pending />} />
+          {/* Manga paths */}
+          <Route path="/manga" element={<Pending />} />
+          <Route path="/manga/:id" element={<Pending />} />
           {/* Help paths */}
-          <Route path="/animes/:id" element={<ContentDetail />} />
-          <Route path="/animes" element={<Pending />} />
-          <Route path="/mangas" element={<Pending />} />
-          <Route path="/help/support" element={<Pending />} />
-          <Route path="/help/advertising" element={<Pending />} />
-          <Route path="/help/faq" element={<Pending />} />
-          <Route path="/help/terms" element={<Pending />} />
-          <Route path="/help/privacy" element={<Pending />} />
-          <Route path="/help/cookie" element={<Pending />} />
-          <Route path="/help/notice-at-collection" element={<Pending />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/support" element={<SupportPage />} />
+          <Route path="/advertising" element={<Pending />} />
+          <Route path="/faq" element={<Pending />} />
+          <Route path="/terms" element={<Pending />} />
+          <Route path="/privacy" element={<Pending />} />
+          <Route path="/cookie" element={<Pending />} />
           <Route path="/sitemap" element={<Pending />} />
           {/* Error paths */}
           <Route path="*" element={<Pending />} />

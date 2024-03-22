@@ -28,7 +28,7 @@ const HomePage = () => {
           {animes.map((anime) => (
             <Link
               key={anime.id}
-              to={{ pathname: `/animes/${anime.id}`, state: anime }}
+              to={{ pathname: `/anime/${anime.id}`, state: anime }}
             >
               <Card name={anime.name} image={anime.image} />
             </Link>

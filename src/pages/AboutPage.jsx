@@ -1,4 +1,4 @@
-const HelpPage = () => {
+const AboutPage = () => {
   return (
     <>
       <blockquote className="text-xl italic font-semibold text-gray-900 dark:text-white">
@@ -65,4 +65,4 @@ const HelpPage = () => {
   );
 };
 
-export default HelpPage;
+export default AboutPage;
