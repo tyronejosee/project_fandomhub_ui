@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+
+import Layout from "./components/layout/Layout";
+import Pending from "./components/common/Pending";
+import ContentDetail from "./components/content/ContentDetail";
+import ButtonScrollTop from "./components/common/ButtonScrollTop";
+
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SupportPage from "./pages/SupportPage";
-import Layout from "./components/layout/Layout";
-import Pending from "./components/common/Pending";
-import { GenrePage } from "./pages/GenrePage";
-import ContentDetail from "./components/content/ContentDetail";
-import ButtonScrollTop from "./components/common/ButtonScrollTop";
+import GenrePage from "./pages/GenrePage";
 
 function App() {
   return (

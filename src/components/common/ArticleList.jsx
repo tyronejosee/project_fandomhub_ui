@@ -22,7 +22,7 @@ const Article = () => {
           Here are the 10 finalists from the MAL x Honeyfeed Writing Contest
           2023! Try them out and let us know which web novels you want to see
           brought to life as published light novel or manga.{" "}
-          <span className="text-fuchsia-600 font-medium">read more...</span>
+          <span className="text-fuchsia-600 font-medium">More</span>
         </p>
         <div className="flex gap-4">
           <p>
