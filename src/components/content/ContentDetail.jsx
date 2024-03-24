@@ -12,52 +12,71 @@ const ContentDetail = () => {
   return (
     <>
       <NavigationMenu items={navigationItems} />
-      <section className="md:flex p-4 border-b border-neutral-200 dark:border-neutral-800">
-        <img
-          className="mx-auto rounded-md h-96 aspect-auto"
-          src="https://cdn.myanimelist.net/images/anime/1806/126216.jpg"
-          alt="Chainsaw Man"
-        />
-        <div className="md:ml-4 space-y-1">
-          <h1 className="text-3xl font-bold tracking-tightd text-balance">
-            Chainsaw Man
-          </h1>
-          <h2 className="block text-lg font-medium">Chainsaw Manu</h2>
-          <h2 className="block text-lg font-medium">チェンソーマン</h2>
-          <Badge text="Action" />
-          <Badge text="Fantasy" />
-          <div
-            id="stats"
-            className="inline-flex items-center border border-neutral-200 dark:border-neutral-800 rounded-md h-16 px-4 space-x-4"
-          >
-            <span className="font-bold text-lg">Ranked #123</span>
-            <span className="font-bold text-lg">Popularity #79</span>
-            <span className="font-bold text-lg">Members 1,482,188</span>
-            <button>Add to my List</button>
-            <button>Add to Favorites</button>
+      <section className="mt-4 relative md:flex p-4 border-b border-neutral-200 dark:border-neutral-800 overflow-hidden">
+        <div className="z-10 rounded-md w-96 aspect-[2/3] mx-auto lg:mx-0 overflow-hidden">
+          <img
+            src="https://cdn.myanimelist.net/images/anime/1806/126216.jpg"
+            alt="Chainsaw Man"
+            className="w-full"
+          />
+        </div>
+        <div className="h-[300px] overflow-hidden absolute inset-0 opacity-30">
+          <div className="bg-gradient-to-t from-neutral-950 from-10% to-transparent absolute inset-0"></div>
+          <img
+            id="banner"
+            src="https://www.nintenderos.com/wp-content/uploads/2022/11/portada_chainsaw-man-92.jpg"
+            alt="Backgroound"
+            className="object-cover w-full h-full rounded-lg"
+          />
+        </div>
+        <div className="relative w-full ml-8">
+          <div className="z-10">
+            <h1 className="scroll-m-20 text-3xl font-bold tracking-tight z-100">
+              Chainsaw Man
+            </h1>
+            <h2 className="block text-lg font-medium">Chainsaw Manu</h2>
+            <h2 className="block text-lg font-medium">チェンソーマン</h2>
+            <Button variant="primary">Add to Favorites</Button>
+            <Button variant="secondary">Add to my list</Button>
+            <Badge text="Action" />
+            <Badge text="Fantasy" />
+            <div>
+              <h3 className="scroll-m-20 text-3xl font-bold tracking-tight">
+                Information
+              </h3>
+              <span className="block">Type: TV</span>
+              <span className="block">Status: Finished Airing</span>
+              <span className="block">Aired: Oct 12, 2022 to Dec 28, 2022</span>
+              <span className="block">Premiered: Fall 2022</span>
+              <span className="block">Studios: MAPPA</span>
+              <span className="block">Source: Manga</span>
+              <span className="block">Genres: Action, Fantasy</span>
+              <span className="block">Theme: Gore</span>
+              <span className="block">Demographic: Shounen</span>
+              <span className="block">Duration: 24 min. per ep.</span>
+              <span className="block">
+                Rating: R - 17+ (violence & profanity)
+              </span>
+              <span className="block">
+                Website: <a href="">Oficcial Site</a>
+              </span>
+            </div>
           </div>
-          <Button variant="primary">Add to Favorites</Button>
-          <Button variant="secondary">Add to my list</Button>
-          <h3>Information</h3>
-          <span>Type: TV</span>
-          <span>Status: Finished Airing</span>
-          <span>Aired: Oct 12, 2022 to Dec 28, 2022</span>
-          <span>Premiered: Fall 2022</span>
-          <span>Studios: MAPPA</span>
-          <span>Source: Manga</span>
-          <span>Genres: Action, Fantasy</span>
-          <span>Theme: Gore</span>
-          <span>Demographic: Shounen</span>
-          <span>Duration: 24 min. per ep.</span>
-          <span>Rating: R - 17+ (violence & profanity)</span>
-
-          <h3>Website</h3>
-          <a href="">Oficcial Site</a>
         </div>
       </section>
       <section className="p-4 space-y-4">
+        <div
+          id="stats"
+          className="flex border justify-center items-center border-neutral-200 dark:border-neutral-800 rounded-md h-16 px-4 space-x-4 "
+        >
+          <span className="font-bold text-lg">Ranked #123</span>
+          <span className="font-bold text-lg">Popularity #79</span>
+          <span className="font-bold text-lg">Members 1,482,188</span>
+        </div>
         <article className="space-y-2">
-          <h3 className="font-medium text-base">Synopsis</h3>
+          <h3 className="scroll-m-20 text-3xl font-bold tracking-tight">
+            Synopsis
+          </h3>
           <p className="text-sm">
             Denji is robbed of a normal teenage life, left with nothing but his
             deadbeat father's overwhelming debt. His only companion is his pet,
@@ -78,7 +97,9 @@ const ContentDetail = () => {
           </p>
         </article>
         <article className="space-y-2">
-          <h3 className="font-medium text-base">Reviews</h3>
+          <h3 className="scroll-m-20 text-3xl font-bold tracking-tight">
+            Reviews
+          </h3>
           <p className="text-sm">
             Denji is robbed of a normal teenage life, left with nothing but his
             deadbeat father's overwhelming debt. His only companion is his pet,
