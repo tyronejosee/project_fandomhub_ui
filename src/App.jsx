@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SupportPage from "./pages/SupportPage";
 import GenrePage from "./pages/GenrePage";
+import ArticleDetail from "./pages/ArticleDetail";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           {/* Anime paths */}
           <Route path="/article" element={<Pending />} />
+          <Route path="/article/detail" element={<ArticleDetail />} />
           <Route path="/genre" element={<GenrePage />} />
           <Route path="/genre/:id" element={<Pending />} />
           <Route path="/anime/:id" element={<ContentDetail />} />

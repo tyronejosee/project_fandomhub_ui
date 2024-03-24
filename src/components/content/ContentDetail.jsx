@@ -1,28 +1,29 @@
-import { ChevronRightIcon } from '@heroicons/react/24/solid';
-import Badge from '../common/Badge';
+import NavigationMenu from "../common/NavigationMenu";
+import Badge from "../common/Badge";
+import Button from "../common/Button";
 
 const ContentDetail = () => {
+  const navigationItems = [
+    { name: "Home", path: "/" },
+    { name: "Anime", path: "/anime" },
+    { name: "Chainsaw Man", path: "/animes" },
+  ];
+
   return (
-    <section>
-      <div className="py-2 px-4 border-b border-neutral-200 dark:border-neutral-800">
-        <div className="flex items-center gap-2">
-          <span className="font-medium">Animes</span>
-          <ChevronRightIcon className="w-4 h-4" />
-          <span className="font-medium">Chainsaw Man</span>
-        </div>
-      </div>
-      <div className="md:flex p-4 border-b border-neutral-200 dark:border-neutral-800">
+    <>
+      <NavigationMenu items={navigationItems} />
+      <section className="md:flex p-4 border-b border-neutral-200 dark:border-neutral-800">
         <img
           className="mx-auto rounded-md h-96 aspect-auto"
           src="https://cdn.myanimelist.net/images/anime/1806/126216.jpg"
           alt="Chainsaw Man"
         />
         <div className="md:ml-4 space-y-1">
-          <h2 className="text-3xl font-bold tracking-tightd text-balance">
+          <h1 className="text-3xl font-bold tracking-tightd text-balance">
             Chainsaw Man
-          </h2>
-          <span className="block text-lg font-medium">Chainsaw Manu</span>
-          <span className="block text-lg font-medium">チェンソーマン</span>
+          </h1>
+          <h2 className="block text-lg font-medium">Chainsaw Manu</h2>
+          <h2 className="block text-lg font-medium">チェンソーマン</h2>
           <Badge text="Action" />
           <Badge text="Fantasy" />
           <div
@@ -32,9 +33,11 @@ const ContentDetail = () => {
             <span className="font-bold text-lg">Ranked #123</span>
             <span className="font-bold text-lg">Popularity #79</span>
             <span className="font-bold text-lg">Members 1,482,188</span>
-            <button className="">Add to my List</button>
-            <button className="">Add to Favorites</button>
+            <button>Add to my List</button>
+            <button>Add to Favorites</button>
           </div>
+          <Button variant="primary">Add to Favorites</Button>
+          <Button variant="secondary">Add to my list</Button>
           <h3>Information</h3>
           <span>Type: TV</span>
           <span>Status: Finished Airing</span>
@@ -51,9 +54,9 @@ const ContentDetail = () => {
           <h3>Website</h3>
           <a href="">Oficcial Site</a>
         </div>
-      </div>
-      <div className="p-4 space-y-4">
-        <div className="space-y-2">
+      </section>
+      <section className="p-4 space-y-4">
+        <article className="space-y-2">
           <h3 className="font-medium text-base">Synopsis</h3>
           <p className="text-sm">
             Denji is robbed of a normal teenage life, left with nothing but his
@@ -73,8 +76,8 @@ const ContentDetail = () => {
             attractive woman, Denji devotes everything and fights with all his
             might to make his naive dreams a reality.
           </p>
-        </div>
-        <div className="space-y-2">
+        </article>
+        <article className="space-y-2">
           <h3 className="font-medium text-base">Reviews</h3>
           <p className="text-sm">
             Denji is robbed of a normal teenage life, left with nothing but his
@@ -94,9 +97,9 @@ const ContentDetail = () => {
             attractive woman, Denji devotes everything and fights with all his
             might to make his naive dreams a reality.
           </p>
-        </div>
-      </div>
-    </section>
+        </article>
+      </section>
+    </>
   );
 };
 

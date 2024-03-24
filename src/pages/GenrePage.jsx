@@ -1,5 +1,7 @@
 import { GenreList } from "../components/categories/GenreList";
 
-export function GenrePage() {
+const GenrePage = () => {
   return <GenreList />;
-}
+};
+
+export default GenrePage;
