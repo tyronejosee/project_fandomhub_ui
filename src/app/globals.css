@@ -2,28 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Scrollbar: Dark */
+.dark ::-webkit-scrollbar-track {
+  background-color: #262626;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #525252;
+  border-radius: 12px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #daff01;
+}
+
+/* Scrollbar: Light */
+.light ::-webkit-scrollbar-track {
+  background-color: #e5e5e5;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background-color: #a3a3a3;
+  border-radius: 12px;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background-color: #262626;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-base leading-5 font-normal text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-950 selection:bg-neutral-500 selection:text-rose-400 dark:selection:bg-rose-700 dark:selection:text-white;
 }
 
 @layer utilities {
