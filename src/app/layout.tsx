@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { LeftSidebar, Navbar } from "@/components";
+import { LeftSidebar, Navbar, Footer } from "@/components";
 import { Inter as FontSans } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
@@ -37,6 +37,7 @@ export default function RootLayout({
             <LeftSidebar />
             <div className="pl-0 lg:pl-[20.5rem] flex flex-col min-h-[650px]">
               {children}
+              <Footer />
             </div>
           </div>
         </ThemeProvider>

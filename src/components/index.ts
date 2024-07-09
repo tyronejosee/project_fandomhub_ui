@@ -5,3 +5,4 @@ export { Navbar } from './Navbar';
 export { Ranking } from './Ranking';
 export { SectionHeader } from './SectionHeader';
 export { Trailer } from './Trailer';
+export { Footer } from './Footer';
