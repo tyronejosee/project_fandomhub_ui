@@ -9,6 +9,7 @@ export default function HomePage() {
   return (
     <>
       <main className="p-4 space-y-12">
+
         <section>
           {/* <Carousel /> */}
         </section>

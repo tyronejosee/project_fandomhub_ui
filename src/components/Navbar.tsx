@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import React from 'react'
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { ModeToggle } from './ModeToggle';
 
 export const Navbar = () => {
   return (
@@ -15,17 +17,22 @@ export const Navbar = () => {
         </Link>
         <div className="flex items-center space-x-4">
           <Link
-            className="inline-flex items-baseline transition-colors hover:text-neutral-100/80 text-neutral-100/60 bg-transparent"
+            className={buttonVariants({ variant: "default" })}
             href={'/anime'}
           >
             Anime
           </Link>
           <Link
-            className="inline-flex items-baseline transition-colors hover:text-neutral-100/80 text-neutral-100/60 bg-transparent"
+            className={buttonVariants({ variant: "outline" })}
             href={'/manga'}
           >
             Manga
           </Link>
+          <Avatar>
+            <AvatarImage src="https://wallpapers-clan.com/wp-content/uploads/2023/01/chainsaw-man-denji-pfp-1.jpg" />
+            <AvatarFallback>TY</AvatarFallback>
+          </Avatar>
+          <ModeToggle />
         </div>
       </div>
     </nav>
