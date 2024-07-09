@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import trailersData from "../../data/trailers.json";
+import trailersData from "../data/trailers.json";
 
 interface Trailer {
   id: number;
@@ -7,7 +7,7 @@ interface Trailer {
   image: string;
 }
 
-export default function TrailerList() {
+export const Trailer = () => {
   const trailers: Trailer[] = trailersData;
 
   return (
@@ -30,6 +30,7 @@ export default function TrailerList() {
               objectFit="cover"
               objectPosition="center"
             /> */}
+            {/* TODO: Add image component */}
           </article>
         ))}
       </section>

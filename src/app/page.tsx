@@ -1,11 +1,7 @@
 import Link from "next/link";
 
-import ArticleList from "@/components/articlelist/ArticleList";
-import SectionHeader from "@/components/sectionheader/SectionHeader";
-import TrailerList from "@/components/trailerlist/TrailerList";
-
 import animesData from "../data/animes.json";
-import Card from "@/components/card/Card";
+import { Article, SectionHeader, Trailer, Card } from "@/components";
 
 export default function HomePage() {
   const animes = animesData;
@@ -22,11 +18,11 @@ export default function HomePage() {
             subtitle="Subcategories pending."
           />
           <section>
-            <ArticleList />
-            <ArticleList />
-            <ArticleList />
-            <ArticleList />
-            <ArticleList />
+            <Article />
+            <Article />
+            <Article />
+            <Article />
+            <Article />
           </section>
         </section>
         <section className="space-y-4">
@@ -58,7 +54,7 @@ export default function HomePage() {
             title="Most Popular Anime Trailers"
             subtitle="Subcategories pending."
           />
-          <TrailerList />
+          <Trailer />
         </section>
       </main>
     </>

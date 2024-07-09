@@ -1,6 +1,6 @@
-import RankingList from "../ranking/Ranking";
+import { Ranking } from "./Ranking"
 
-export default function LeftSidebar() {
+export const LeftSidebar = () => {
   return (
     <aside className="hidden lg:block fixed z-20 inset-0 top-[60px] left-[max(0px,calc(50%-45rem))] right-auto w-[19rem] overflow-y-auto space-y-8 pr-4">
       <section>
@@ -20,32 +20,32 @@ export default function LeftSidebar() {
           </button>
         </nav>
 
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
       </section>
       <section>
         <h2 className="text-lg font-medium">Top Upcoming Anime</h2>
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
       </section>
       <section>
         <h2 className="text-lg font-medium">Most Popular Anime</h2>
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
-        <RankingList />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
+        <Ranking />
       </section>
     </aside>
   )

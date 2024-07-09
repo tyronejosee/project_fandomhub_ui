@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function ArticleList() {
+export const Article = () => {
   return (
     <Link
       href={"/article/detail"}

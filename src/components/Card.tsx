@@ -1,9 +1,9 @@
-interface CardProps {
+interface Props {
   name: string;
   image: string;
 }
 
-export default function Card({ name, image }: CardProps) {
+export const Card = ({ name, image }: Props) => {
   return (
     <article className="group">
       <div className="overflow-hidden rounded-md aspect-[2/3] bg-neutral-900">
